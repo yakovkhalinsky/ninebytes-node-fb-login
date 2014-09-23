@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/yakovkhalinsky/ninebytes-node-fb-login",
   "dependencies": {
-    "request": "^2.44.0"
+    "request": "2.44.0",
+    "validator": "3.19.0"
   }
 }
