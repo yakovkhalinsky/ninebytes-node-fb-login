@@ -1,0 +1,23 @@
+{
+  "name": "ninebytes-node-fb-login",
+  "version": "0.0.1",
+  "description": "Node module to verify Facebook users",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yakovkhalinsky/ninebytes-node-fb-login.git"
+  },
+  "keywords": [
+    "nodejs",
+    "facebook"
+  ],
+  "author": "Yakov Khalinsky <yakov@therocketsurgeon.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yakovkhalinsky/ninebytes-node-fb-login/issues"
+  },
+  "homepage": "https://github.com/yakovkhalinsky/ninebytes-node-fb-login",
+  "dependencies": {
+    "request": "^2.44.0"
+  }
+}
