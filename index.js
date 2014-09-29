@@ -12,15 +12,13 @@ exports.validateUserAccessTokenAndId = function(fbAppToken, userAccessToken, use
     var url = FB_URL + '?input_token=' + sanitize.escape(userAccessToken) + '&access_token=' + fbAppToken;
     request({url: url, json: true}, function (error, response, body) {
         if (error) {
-            return cb(error);
+            return cb(error, false);
         }
 
-        if (!body) {
-            return cb(null, false);
+        if (response.statusCode !== 200) {
+            return cb(body.error, false);
         }
 
-        if (!error && response.statusCode === 200) {
-            return cb(null, body.data['is_valid'] && body.data['user_id'] === sanitize.escape(userId));
-        }
+        return cb(null, body.data['is_valid'] && body.data['user_id'] === sanitize.escape(userId));
     });
 };
