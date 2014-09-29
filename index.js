@@ -12,7 +12,7 @@ exports.validateUserAccessTokenAndId = function(fbAppToken, userAccessToken, use
     var url = FB_URL + '?input_token=' + sanitize.escape(userAccessToken) + '&access_token=' + fbAppToken;
     request({url: url, json: true}, function (error, response, body) {
         if (error) {
-            cb(error);
+            return cb(error);
         }
 
         if (!body) {
