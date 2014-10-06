@@ -1,6 +1,6 @@
 {
   "name": "ninebytes-node-fb-login",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Node module to verify Facebook users",
   "main": "index.js",
   "repository": {

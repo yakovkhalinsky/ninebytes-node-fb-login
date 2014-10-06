@@ -19,6 +19,11 @@ exports.validateUserAccessTokenAndId = function(fbAppToken, userAccessToken, use
             return cb(body.error, false);
         }
 
-        return cb(null, body.data['is_valid'] && body.data['user_id'] === sanitize.escape(userId));
+        return cb(null,
+                {
+                    isValid: body.data['is_valid'] && body.data['user_id'] === sanitize.escape(userId),
+                    data: body.data
+                }
+        );
     });
 };

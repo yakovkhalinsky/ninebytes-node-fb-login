@@ -14,3 +14,8 @@ fb.validateUserAccessTokenAndId(fbAppToken, userAccessToken, userId, function(er
     console.log('callback: ', error, isValid);
 });
 ```
+
+
+### Where do I get my App Token From?
+
+https://developers.facebook.com/tools/accesstoken/
